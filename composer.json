@@ -1,0 +1,14 @@
+{
+  "name": "poo/poo-framework",
+  "description": "Mon premier framework",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "POO\\": "POOFrameworks"
+    }
+  },
+  "require": {
+    "php": ">=5.4.16"
+  }
+}

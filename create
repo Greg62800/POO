@@ -1,0 +1,21 @@
+#!/usr/bin/php
+<?php
+
+$name = $argv[1];
+$controllerName = $name . 'Controller';
+if(!isset($argv[2])) {
+    c($controllerName);
+}
+
+function c($controllerName) {
+    $controllerFile = fopen('src/Controller/' . $controllerName . '.php', 'w+');
+    fputs($controllerFile, '<?php
+namespace App\Controller;
+
+class ' . $controllerName . ' extends AppController
+{
+}
+    ');
+    fclose($controllerFile);
+    echo "Le controller $controllerName a bien été créer";
+}
